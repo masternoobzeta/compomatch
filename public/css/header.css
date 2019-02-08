@@ -1,0 +1,108 @@
+.navbar {
+    text-align:center;
+}
+
+ul {
+    display:-webkit-inline-flex;
+    display:-moz-inline-box;
+    display:-ms-inline-flexbox;
+    display:-webkit-inline-flex;
+    display:inline-flex;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: relative;
+
+}
+
+li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+}
+
+li a {
+    display:block;
+    min-width:141px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: #2f3036;
+    text-decoration: none;
+}
+
+li:hover a {
+    background: darkgrey;
+}
+
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:hover ul a:hover {
+    background: gray;
+    color: #fff;
+}
+
+li ul {
+    display: none;
+    position: absolute;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #2f3036;
+    background: #f3f3f3;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+@media screen and (max-width : 1000px){
+
+    ul {
+        position: static;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+
+    ul li, li a {
+        width: 100%;
+    }
+
+    .show-menu {
+        display:block;
+    }
+}

@@ -24,6 +24,7 @@
         .full-height {
             height: 100vh;
         }
+        /*This is a comment*/
 
         .flex-center {
             align-items: center;
@@ -79,19 +80,19 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel
+            Compomatch
         </div>
 
         <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
+            <a href="motherboards">Motherboard</a>
+            <a href="cpus">CPU</a>
+            <a href="videocards">Videocard</a>
+            <a href="memories">Memory</a>
+            <a href="harddrives">Harddrive</a>
+            <a href="powersupplies">Powersupply</a>
+            <a href="towers">Case</a>
         </div>
     </div>
 </div>
-
 </body>
 </html>
-
