@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateCpuHardwareTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('cpu_hardware', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', '50');
-            $table->string('email', '50')->unique();
-            $table->string('password');
-            $table->rememberToken();
+
+            $table->unsignedInteger('hardware_id');
+            $table->foreign('hardware_id')->references('id')->on('hardwares');
+
+            $table->unsignedInteger('cpu_id');
+            $table->foreign('cpu_id')->references('id')->on('cpus');
+
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('cpu_hardware');
     }
 }

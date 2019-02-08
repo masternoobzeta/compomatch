@@ -2,10 +2,10 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Comment::class, function (Faker $faker) {
     return [
-        'comment' => $faker->text,
-        'created_at' => $faker->dateTime,
-        'updated_at' => $faker->dateTime,
+        'body' => $faker->text,
+        'user_id' => App\User::all()->random()->id,
+        'article_id' => App\Article::all()->random()->id
     ];
 });

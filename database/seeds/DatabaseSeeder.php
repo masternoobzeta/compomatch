@@ -11,14 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(Seed_user::class);
-        $this->call(Seed_comment::class);
+        $this->call(UsersTableSeeder::class);
+        $this->call(ArticlesTableSeeder::class);
+        $this->call(CommentsTableSeeder::class);
         $this->call(HarddrivesTableSeeder::class);
-        $this->call(CpuTableSeeder::class);
+        $this->call(CpusTableSeeder::class);
         $this->call(MemoriesTableSeeder::class);
         $this->call(MotherboardsTableSeeder::class);
         $this->call(PowersuppliesTableSeeder::class);
         $this->call(TowersTableSeeder::class);
         $this->call(VideocardsTableSeeder::class);
+        $this->call(HardwaresTableSeeder::class);
+        $this->call(TecharticlesTableSeeder::class);
     }
 }
