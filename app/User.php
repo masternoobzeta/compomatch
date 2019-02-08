@@ -1,14 +1,10 @@
 <?php
-
 namespace App;
-
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
 class User extends Authenticatable
 {
-    use Notifiable;
-
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -17,7 +13,6 @@ class User extends Authenticatable
     protected $fillable = [
         'username', 'email', 'password',
     ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -26,14 +21,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
-
     public $timestamps = false;
-
-
     public function comment(){
         return $this->hasMany('App\Comment');
     }
-
     public function hardware(){
         return $this->hasMany('App\Hardware');
     }
